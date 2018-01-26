@@ -1,4 +1,4 @@
-package practicalone;
+package practicaltwo;
 
 import java.util.Date;
 import java.util.Scanner;
