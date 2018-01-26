@@ -161,15 +161,15 @@ if [ "$CHECK" = true ]; then
   python3 gatorgrader/gatorgrader.py --directories writing . --checkfiles README.md
   determine_exit_code $?
   # --> GatorGrader CHECK: the correct number of comments in the Java code
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalone/ \
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicaltwo/ \
                                      --checkfiles DisplayArtwork.java --singlecomments 2 --multicomments 2 --language Java
   determine_exit_code $?
   # --> GatorGrader CHECK: the "new Date()" fragment exists in the code at least once
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalone \
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicaltwo \
                                      --checkfiles DisplayArtwork.java --fragments "new Date()" --fragmentcounts 1
   determine_exit_code $?
   # --> GatorGrader CHECK: at least 4 "println()" fragment exists in the code
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalone \
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicaltwo \
                                      --checkfiles DisplayArtwork.java --fragments "println(" --fragmentcounts 9
   determine_exit_code $?
   # --> GatorGrader CHECK: running the program produces exactly 20 lines of output
