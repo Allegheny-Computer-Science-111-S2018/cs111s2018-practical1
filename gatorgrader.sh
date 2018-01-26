@@ -124,17 +124,17 @@ if [ "$CHECK" = true ]; then
   printf "%s\n" "${blu}...Finished running the Gradle checks${end}"
 
   # run all of the writing checks with mdl and proselint
-  echo ""
-  printf "%s\n" "${red}Checking the correctness of your technical writing!${end}"
-  echo ""
-  printf "%s\n" "${blu}Starting to run the mdl and proselint checks...${end}"
-  echo ""
-  mdl README.md
-  determine_exit_code $? "mdl README.md"
-  proselint README.md
-  determine_exit_code $? "proselint README.md"
-  echo ""
-  printf "%s\n" "${blu}...Finished checking the correctness of your technical writing${end}"
+  #echo ""
+  #printf "%s\n" "${red}Checking the correctness of your technical writing!${end}"
+  #echo ""
+  #printf "%s\n" "${blu}Starting to run the mdl and proselint checks...${end}"
+  #echo ""
+  #mdl README.md
+  #determine_exit_code $? "mdl README.md"
+  #proselint README.md
+  #determine_exit_code $? "proselint README.md"
+  #echo ""
+  #printf "%s\n" "${blu}...Finished checking the correctness of your technical writing${end}"
 
   # run all of the checks with GatorGrader
   echo ""
@@ -172,8 +172,8 @@ if [ "$CHECK" = true ]; then
   python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalone \
                                      --checkfiles DisplayArtwork.java --fragments "println(" --fragmentcounts 9
   determine_exit_code $?
-  # --> GatorGrader CHECK: running the program produces exactly 4 lines of output
-  python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle run" --outputlines 10 --languages Java
+  # --> GatorGrader CHECK: running the program produces exactly 20 lines of output
+  python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle -q --console plain run" --outputlines 10
   determine_exit_code $?
   # --> GatorGrader CHECK: running the program produces the correct output
   python3 gatorgrader/gatorgrader.py --nowelcome --commands "gradle run" --fragments @@ --languages Java
