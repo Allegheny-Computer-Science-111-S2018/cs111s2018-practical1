@@ -29,7 +29,7 @@ jar {
 
 // give the name of the application to run with "gradle run" command
 apply plugin: 'application'
-mainClassName = 'practicalone.DisplayArtwork'
+mainClassName = 'practicaltwo.DisplayArtwork'
 
 // perform checkstyle checking with the "gradle check" command
 apply plugin: 'checkstyle'
