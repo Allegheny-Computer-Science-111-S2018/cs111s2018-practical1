@@ -29,7 +29,7 @@ PROFESSOR PROBLEMS?
 
 -->
 
-# cs111s2018-practical1
+# cs111s2018-practical2
 
 Designed for use with [GitHub Classroom](https://classroom.github.com/), this
 repository contains the starter files for practical 1 in Computer Science 111.
